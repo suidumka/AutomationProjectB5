@@ -21,7 +21,6 @@ public class GoogleSearch {
 
         // create the driver object
         WebDriver driver1 = new ChromeDriver();
-/*
         driver1.navigate().to("https://www.google.com");
 
        driver1.manage().window().maximize();  // navigate to google  // driver.get()
@@ -35,7 +34,7 @@ public class GoogleSearch {
            System.out.println("Actual title " + actualTitle + " matches expected title:  " + expectedTitle + ". => TEST PASS");
        }else {
            System.err.println("Actual title " + actualTitle + " DOES NOT match expected title:  " + expectedTitle + ". => TEST FAIL");
-       }*/
+       }
 
 
        String expectedURL = "https://www.google.com";
