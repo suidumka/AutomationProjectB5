@@ -13,7 +13,6 @@ public class T1_DocuportLogin_getText {
 
        // WebDriver driver = WebDriverUtil.getDriver("chrome"); //or instead of this we can make it resuable:
         WebDriver driver = WebDriverUtil.getDriver(GeneralConstants.CHROME);
-
         driver.manage().window().maximize();
 
        //driver.get("https://beta.docuport.app"); // or instead of this we can make it resuable:
