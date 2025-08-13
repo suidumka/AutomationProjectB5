@@ -14,7 +14,7 @@ public class T4_forgot_password {
         driver.manage().window().maximize();
 
         // go to the url
-        driver.get(DocuportConstants.DOCUPORT_TEST);
+        driver.get(DocuportConstants.DOCUPORT_URL_TEST);
 
         //locate the forget password link with css and click on it
         WebElement forgetPasswordLink = driver.findElement(By.cssSelector("a[href='/reset-password']"));
