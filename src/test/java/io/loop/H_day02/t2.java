@@ -15,7 +15,7 @@ public class t2 {
         driver.manage().window().maximize();
 
         //input login to docuport application
-        driver.get(DocuportConstants.DOCUPORT_TEST);
+        driver.get(DocuportConstants.DOCUPORT_URL_TEST);
         WebElement userLogin = driver.findElement(By.id("input-14"));
         userLogin.sendKeys(DocuportConstants.USERNAME_CLIENT);
 

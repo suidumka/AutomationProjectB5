@@ -3,7 +3,7 @@ package io.loop.Utilities;
 public class DocuportConstants {
 
     // url for test env
-    public static final String DOCUPORT_TEST = "https://beta.docuport.app";
+    public static final String DOCUPORT_URL_TEST = "https://beta.docuport.app";
 
     // usernames for roles
     public static final String USERNAME_CLIENT = "b1g1_client@gmail.com";
@@ -20,19 +20,15 @@ public class DocuportConstants {
     public static final String EXPECTED_LOGO_DOCUPORT = "Docuport";
     public static final String EXPECTED_USERNAME_PLACEHOLDER = "Username or email";
     public static final String EXPECTED_PASSWORD_PLACEHOLDER = "Password";
+    public static final String RESET_PASSWORD_MSG = "Enter the email address associated with your account";
 
     public static final String EXPECTED_ERROR_USERNAMEMESSAGE = "Please enter your username or email address";
     public static final String EXPECTED_ERROR_PASSWORDMESSAGE = "Please enter your password";
 
-    // general:
-    public static final String EXPECTED_DROP_DOWN_MENU = "BG";
+    // email for registration:
+    public static final String EMAIL_FOR_DOCUPORT = "forgotpasswordg1@gmail.com";
 
-    public static final String BATCH_NUMBER = "Batch1 Group1";
+    //forgot password URL
+    public static final String FORGOT_PASSWORD_URL = "https://beta.docuport.app/reset-password";
 
-
-    int wait;
-
-    public DocuportConstants(int wait) {
-        this.wait = wait;
-    }
 }
