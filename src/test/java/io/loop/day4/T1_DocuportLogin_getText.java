@@ -16,7 +16,8 @@ public class T1_DocuportLogin_getText {
         driver.manage().window().maximize();
 
        //driver.get("https://beta.docuport.app"); // or instead of this we can make it resuable:
-        driver.get(DocuportConstants.DOCUPORT_TEST);
+        driver.get(DocuportConstants.DOCUPORT_URL_TEST);
+
 
         // locate username
         WebElement userName = driver.findElement(By.id("input-14"));

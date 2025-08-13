@@ -13,7 +13,7 @@ public class t3 {
         driver.manage().window().maximize();
 
         //navigate to docuport webpage
-        driver.get(DocuportConstants.DOCUPORT_TEST);
+        driver.get(DocuportConstants.DOCUPORT_URL_TEST);
 
         //validate placeholders for username
         WebElement usernamePlaceholder = driver.findElement(By.cssSelector("label[for='input-14']"));

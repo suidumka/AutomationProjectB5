@@ -11,7 +11,7 @@ public class T3_css_practice {
     public static void main(String[] args) {
         WebDriver driver = WebDriverUtil.getDriver(GeneralConstants.CHROME);
         driver.manage().window().maximize();
-        driver.navigate().to(DocuportConstants.DOCUPORT_TEST);
+        driver.navigate().to(DocuportConstants.DOCUPORT_URL_TEST);
 
         // locate the element with css
         WebElement logo = driver.findElement(By.cssSelector("img[src='/img/logo.d7557277.svg']"));
