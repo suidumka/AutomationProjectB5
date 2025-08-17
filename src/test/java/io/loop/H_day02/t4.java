@@ -13,6 +13,6 @@ public class t4 {
         driver.manage().window().maximize();
 
         //input login to docuport application
-        driver.get(DocuportConstants.DOCUPORT_TEST);
+      //  driver.get(DocuportConstants.DOCUPORT_TEST);
     }
 }

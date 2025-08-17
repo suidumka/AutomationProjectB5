@@ -16,7 +16,7 @@ public class t1 {
    driver.get(LoopcampConstants.FORGOT_FORM_URL);
 
         //Locate forgot password
-        WebElement forgotPassword = driver.findElement(By.cssSelector("div[class = \"example\"]>h2"));
+        WebElement forgotPassword = driver.findElement(By.cssSelector("div[class='example']>h2"));
         String actualForgotPassword = forgotPassword.getText();
         String expectedForgotPassword = LoopcampConstants.EXPECTED_FORGOT_PASSWORD;
 
