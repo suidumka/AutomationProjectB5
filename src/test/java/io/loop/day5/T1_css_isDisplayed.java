@@ -14,8 +14,18 @@ public class T1_css_isDisplayed {
         driver.get(GeneralConstants.HEROKUAPP_URL);
 
 
-       // WebElement forgotPasswordHeading = driver.findElement(By.cssSelector("//div[@class='example']/h2"));
-        //System.out.println("forgotPasswordHeading = " + forgotPasswordHeading);
+       WebElement forgotPasswordHeading = driver.findElement(By.cssSelector("div[class='example']>h2"));
+       // printing
+        System.out.println("forgotPasswordHeading = " + forgotPasswordHeading.getText());
+
+        // .isDisplaued() boolean - will return true or false depentind on the element is displayed at html
+        System.out.println("forgotPasswordHeading = " + forgotPasswordHeading.isDisplayed());
+
+        if (forgotPasswordHeading.isDisplayed()) {
+            System.out.println("Test pass");
+        }else {
+            System.out.println("Test failed");
+        }
 
 
     }

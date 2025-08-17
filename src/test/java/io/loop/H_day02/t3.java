@@ -44,7 +44,8 @@ public class t3 {
 
 
 
-        WebElement usernameErrMsg = driver.findElement(By.cssSelector("div.mb-4.col.col-12:nth-of-type(1) .v-messages__message"));
+        WebElement usernameErrMsg = driver.findElement(By.cssSelector(".mb-4:nth-of-type(1) .v-messages__message"));
+        //WebElement passwordErrMsg = driver.findElement(By.cssSelector("div.mb-4.col.col-12:nth-of-type(1) .v-messages__message"));
         String actualUsernameErrMsg = usernameErrMsg.getText();
         String expectedUsernameErrMsg = DocuportConstants.EXPECTED_ERROR_USERNAMEMESSAGE;
 
@@ -54,7 +55,8 @@ public class t3 {
             System.out.println("Actual: " + actualUsernameErrMsg + ", DOES NOT match with: " + expectedUsernameErrMsg + "=> TEST FAIL");
         }
 
-        WebElement passwordErrMsg = driver.findElement(By.cssSelector("div.mb-4.col.col-12:nth-of-type(2) .v-messages__message"));
+        WebElement passwordErrMsg = driver.findElement(By.cssSelector(".mb-4:nth-of-type(2) .v-messages__message"));
+        // WebElement passwordErrMsg = driver.findElement(By.cssSelector("div.mb-4.col.col-12:nth-of-type(2) .v-messages__message"));
         String actualPasswordErrMsg = usernameErrMsg.getText();
         String expectedPasswordErrMsg = DocuportConstants.EXPECTED_ERROR_PASSWORDMESSAGE;
 
