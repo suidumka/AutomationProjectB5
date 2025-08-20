@@ -17,8 +17,6 @@ public class T1_radioButton {
 
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 
-       driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
-
         WebElement red = driver.findElement(By.xpath("//input[@id='red']"));
         WebElement green = driver.findElement(By.xpath("//input[@id='green']"));
 
@@ -30,7 +28,7 @@ public class T1_radioButton {
 
         green.click();
         System.out.println("red.isSelected() = After clicking: " + green.isSelected());
-        // if the button is disabled, so it will not throw the exception.
+        // if the button is disabled, it will not throw the exception.
         // it will try to click it, and the output will be false (not clicked)
 
         System.out.println("red.isSelected() = " + red.isSelected());
@@ -40,7 +38,7 @@ public class T1_radioButton {
 
         Thread.sleep(3000);
 
-        driver.quit();
+        // driver.quit();
         }
 }
 /*

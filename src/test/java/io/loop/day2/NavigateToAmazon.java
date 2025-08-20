@@ -20,5 +20,7 @@ public class NavigateToAmazon {
         driver1.navigate().back();
         driver1.navigate().forward();
         driver1.navigate().refresh();
+
+
     }
 }

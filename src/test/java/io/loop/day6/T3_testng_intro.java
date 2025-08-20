@@ -1,6 +1,5 @@
 package io.loop.day6;
 
-import org.testng.Assert;
 import org.testng.annotations.*;
 import static org.testng.Assert.*;
 
