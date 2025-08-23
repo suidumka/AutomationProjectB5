@@ -9,40 +9,44 @@ import org.openqa.selenium.WebElement;
 import java.time.Duration;
 
 public class T2_checkBoxes {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws InterruptedException {
         WebDriver driver = WebDriverUtil.getDriver(GeneralConstants.CHROME);
         driver.manage().window().maximize();
 
         driver.get("http://the-internet.herokuapp.com/checkboxes");
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 
-       // WebElement checkbox1 = driver.findElement(By.xpath("//input/following-sibling::text()[contains(.,'checkbox 1')]"));
         WebElement checkbox1 = driver.findElement(By.xpath("//input/following-sibling::text()[contains(.,'checkbox 1')]/preceding-sibling::input"));
-         // in html there are 2 checkboxes: so the second will work like this:  //form[@id='checkboxes']//text()[contains(.,'checkbox 2')]/preceding::input[1]
-        //input[@type='checkbox' and following-sibling::text()[contains(.,'checkbox 1')]] => option 2 for
+                                                                          //input[@type='checkbox' and following-sibling::text()[contains(.,'checkbox 1')]] => option 2 for
 
 
         // here we selected the text next to checkbox, but since the text is not clickable->
         // we found an element of checkbox which is clickable with /preceding-sibling::input
 
 
-        WebElement checkbox2 = driver.findElement(By.xpath("//input[@type='checkbox' and normalize-space(following-sibling::text())='checkbox 2']"));
+        WebElement checkbox2 = driver.findElement(By.xpath("//input[@type='checkbox' and normalize-space(following-sibling::text())='checkbox 2']/preceding-sibling::input"));
 
-        if (!checkbox1.isSelected()) {
-            System.out.println("checkbox is NOT selected " );
-        } else {
-            System.out.println("checkbox1 is selected " );
-        }
 
         checkbox1.click();
+        Thread.sleep(3000);
 
         if (!checkbox1.isSelected()) {
-            System.out.println("checkbox is NOT selected " );
+            System.out.println("box 1: checkbox is NOT selected " );
         } else {
-            System.out.println("checkbox1 is selected " );
+            System.out.println("box 1: checkbox1 is selected " );
         }
 
+        // chechbiox is clicked by default
+        if (!checkbox2.isSelected()) {
+            System.out.println("box 2: checkbox is NOT selected " );
+        } else {
+            System.out.println("box 2: checkbox1 is selected " );
+        }
 
+        Thread.sleep(3000);
+
+
+       // driver.quit();
     }
 }
 /*

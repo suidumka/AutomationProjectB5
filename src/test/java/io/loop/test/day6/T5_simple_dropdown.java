@@ -47,6 +47,8 @@ public class T5_simple_dropdown {
 
         // Option 2 - create an object of Select class and put it directly:
         Select dropdown = new Select(driver.findElement(By.xpath("//select[@id='dropdown']")));
+
+        //validate default select
         actual = dropdown.getFirstSelectedOption().getText();
         assertEquals(actual, expected, "Actual " + actual + " Does NOT match with " + expected);
 

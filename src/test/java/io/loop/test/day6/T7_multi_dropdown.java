@@ -44,39 +44,32 @@ public class T7_multi_dropdown {
         assertTrue(dropdown.isMultiple(), "Dropdown is not multi select");
 
 
-    /*  Multi-select:
-            Option: 1
+    /*  Multi-select:  Option: 1
+
         dropdown.selectByIndex(0);
         dropdown.selectByValue("saab");
         dropdown.selectByVisibleText("Opel");
         dropdown.deSelectByContainsVisibleText("Au");*/
 
+    /*  Multi-select:   Option: 2
 
-    /*
-        Multi-select:
-            Option: 2
-
-        List< WebElement> options;
-        options = dropdown.getOptions();
+        List< WebElement> options = dropdown.getOptions();
 
         for (WebElement option : options){
             option.click();
-            System.out.println("option = " + option.getText());
-        }*/
-    /*
-        Option: 3
-        List< WebElement> options;
-        options = dropdown.getOptions();
+            System.out.println("option = " + option.getText());}*/
+
+    /*  Multi-select: Option: 3
+        List< WebElement> options = dropdown.getOptions();
 
         options.forEach(option -> {
             option.click();
             System.out.println("option.getText() = " + option.getText());
         });*/
 
-        // Option: 4
+        // Multi-select: Option: 4
 
-        List< WebElement> options;
-        options = dropdown.getOptions();
+        List< WebElement> options  = dropdown.getOptions();
 
         options.forEach(WebElement::click);
 
