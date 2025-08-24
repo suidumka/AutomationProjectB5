@@ -13,6 +13,7 @@ public class TestBase {
 
     @BeforeMethod
     public void setUpMethod(){
+        //driver = WebDriverUtil.getDriver(GeneralConstants.CHROME); // we created a config property
         driver = WebDriverUtil.getDriver(ConfigurationReader.getProperties("browser"));
         driver.manage().window().maximize();
     }

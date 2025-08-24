@@ -76,7 +76,6 @@ public class T7_multi_dropdown {
 
         //   5. Deselect all values.
 
-        options.forEach(WebElement::click);
         dropdown.deselectAll();
 
     }
