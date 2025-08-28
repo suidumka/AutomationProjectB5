@@ -71,7 +71,28 @@ public class T1 extends TestBase {
 
        // List <WebElement> tagsDropdownOptions = driver.findElements(By.xpath("//input[@id='input-134']/parent::div"));
         List <WebElement> tagsDropdownOptions = driver.findElements(By.xpath("//label[.='Tags']/parent::div"));
-        tagsDropdownOptions.forEach(WebElement::click);
+
+
+        Thread.sleep(3000);
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
+
+
+        // select couple options
+        driver.findElement(By.xpath("//span[@class='white--text' and text()[contains(.,'Other Documents')]]")).click();
+        driver.findElement(By.xpath("//span[@class='white--text' and text()[contains(.,'License')]]")).click();
+
+        //label[normalize-space()='Tags']/following::span[contains(@class,'v-chip__content')][.='IRS/State Letter']/button[@type='button']
+
+        List<WebElement> optionsOfTagDropdown
+                = driver.findElements(By.xpath("//div[@class='v-select__selections']//span[contains(@class,'v-chip__content')]"));
+
+        // validate tags dropdown is multiselect
+
+        if (optionsOfTagDropdown.size() > 1) {
+            System.out.println("Tags dropdown: allows to select multiple options\"");
+        } else {
+            System.out.println("Tags dropdown: does NOT allow to select multiple options\"");
+        }
 
 
 
