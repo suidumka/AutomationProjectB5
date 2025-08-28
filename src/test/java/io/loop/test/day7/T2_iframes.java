@@ -17,30 +17,27 @@ public class T2_iframes extends TestBase {
         driver.get("https://loopcamp.vercel.app/iframe.html");
         driver.manage().window().maximize();
 
+        //Option 1: Switch to iframe by index
+       // driver.switchTo().frame(0); //by index
 
-        //Option 1
-        //Switch to iframe by index
-        driver.switchTo().frame(0); //by index
+        // Option 2: Switch to iframe by name or id
+        driver.switchTo().frame("mce_0_ifr");
 
-        // Option 2
-        //Switch to iframe by name or id
-        //driver.switchTo().frame("mce_0_ifr");
-
-        //Option 3
-        //Switch to iframe by xpath
-       // WebElement iframe = driver.findElement(By.xpath("//iframe[@id='mce_0_ifr']"));
-        //driver.switchTo().frame(iframe);
+     /*   Option 3: Switch to iframe by xpath
+        WebElement iframe = driver.findElement(By.xpath("//iframe[@id='mce_0_ifr']"));
+        driver.switchTo().frame(iframe);
 
         WebElement someText = driver.findElement(By.xpath("//p[.='Your content goes here.']"));
-        System.out.println("someText.getText() = " + someText.getText());
+        System.out.println("someText.getText() = " + someText.getText());*/
+
 
         //locating the textBox
         WebElement iframeBox = driver.findElement(By.xpath("//*[@id='tinymce']"));
-        someText.clear();
-        someText.sendKeys("Loopcamp");
-        assertEquals(iframeBox.getText(), "Loopcamp", "Dont Match");
+        iframeBox.clear();
+        iframeBox.sendKeys("Loopcamp");
+        assertEquals(iframeBox.getText(), "Loopcamp", "NO Match");
 
-        //switch back to main content
+        //switch back to main content, because the header is outside of the iframe. so we need to exit the frame with:
         driver.switchTo().defaultContent();
 
         WebElement header = driver.findElement(By.xpath("//h3[contains(text(),'An iFrame')]"));

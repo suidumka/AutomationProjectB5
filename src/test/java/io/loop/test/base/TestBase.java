@@ -13,6 +13,7 @@ public class TestBase {
 
     @BeforeMethod
     public void setUpMethod(){
+        //driver = WebDriverUtil.getDriver(GeneralConstants.CHROME); // we created a config property
         driver = WebDriverUtil.getDriver(ConfigurationReader.getProperties("browser"));
         driver.manage().window().maximize();
     }
@@ -20,7 +21,7 @@ public class TestBase {
     @AfterMethod
     public void tearDropDown() throws InterruptedException {
         Thread.sleep(3000);
-       // driver.quit();
+       //driver.quit();
     }
 
 

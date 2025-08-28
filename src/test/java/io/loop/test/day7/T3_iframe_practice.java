@@ -18,7 +18,9 @@ public class T3_iframe_practice extends TestBase {
     public void iframeValidation(){
         driver.get("https://loopcamp.vercel.app/nested-frames.html");
 
-        // validate LEFT
+        // in this html we have 2 main iframes, 1 frame contains: left/middle/right. and 2nd frame is seperate frame
+
+        // validate LEFT. There is a nested iframe. we need to switch first the outter one and next inner one
         driver.switchTo().frame("frame-top");
         driver.switchTo().frame("frame-left");
 
@@ -26,6 +28,7 @@ public class T3_iframe_practice extends TestBase {
         String actualLeft = left.getText();
         assertEquals(actualLeft.trim(), "LEFT", "Left text does not match");
 
+        // coming back to outter frame
         driver.switchTo().parentFrame();
 
         // validate MIDDLE
@@ -35,6 +38,7 @@ public class T3_iframe_practice extends TestBase {
         String actualMiddle = middle.getText();
         assertEquals(actualMiddle.trim(), "MIDDLE", "Middle text does not match");
 
+        // coming back to outter frame
         driver.switchTo().parentFrame();
 
         // validate RIGHT
@@ -43,6 +47,7 @@ public class T3_iframe_practice extends TestBase {
         String actualRight = right.getText();
         assertEquals(actualRight.trim(), "RIGHT", "Right text does not match");
 
+        // bottom frame is seperate from outter iframe, so we need to go back to html
         driver.switchTo().defaultContent();
 
         // validate BOTTOM
