@@ -12,7 +12,7 @@ import static org.testng.Assert.assertEquals;
 
 public class T6_uploads {
     @Test
-    public void upload_file(){
+    public void upload_file() throws InterruptedException {
         Driver.getDriver().navigate().to("http://demo.guru99.com/test/upload");
         Driver.getDriver().manage().timeouts().implicitlyWait(Duration.ofSeconds(60));
         WebElement chooseFile = Driver.getDriver().findElement(By.xpath("//input[@type='file']"));
@@ -26,10 +26,9 @@ public class T6_uploads {
         submitButton.click();
 
         String expected = "1 file\nhas been successfully uploaded.";
-       String successMSG = Driver.getDriver().findElement(By.xpath("//h3[@id='res']")).getText();
-       assertEquals(expected, successMSG, "No match");
-
-
+        WebElement successMessage = Driver.getDriver().findElement(By.xpath("//h3[@id='res']/center"));
+        Thread.sleep(2000);
+        assertEquals(expected, successMessage.getText(), "No match.");
 
     }
 }
