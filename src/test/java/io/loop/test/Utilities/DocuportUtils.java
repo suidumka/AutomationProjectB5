@@ -14,7 +14,7 @@ public class DocuportUtils {
      * author SJ
      */
 
-    public static void login (WebDriver driver, String role) throws InterruptedException {
+    public static void login(WebDriver driver, String role) throws InterruptedException {
         driver.get(ConfigurationReader.getProperties("docuportBETA"));
         WebElement username = driver.findElement(By.xpath("//label[.='Username or email']/following-sibling::input"));
         WebElement password = driver.findElement(By.xpath("//input[@type='password']"));
@@ -37,14 +37,14 @@ public class DocuportUtils {
                 username.sendKeys(DocuportConstants.USERNAME_ADVISOR);
                 password.sendKeys(DocuportConstants.PASSWORD_FOR_LOGIN);
                 break;
-            default:throw new InterruptedException("There is not such a role" + role);
+            default:throw new InterruptedException("There is not such a role " + role);
         }
 
         loginButton.click();
 
-        if (role.toLowerCase().equals("client")){
+        if(role.toLowerCase().equals("client")){
             Thread.sleep(3000);
-            WebElement cont= driver.findElement(By.xpath("//button[@type='submit']"));
+            WebElement cont = driver.findElement(By.xpath("//button[@type='submit']"));
             cont.click();
             Thread.sleep(3000);
         }
