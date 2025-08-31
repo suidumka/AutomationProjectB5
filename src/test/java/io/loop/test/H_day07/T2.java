@@ -1,5 +1,6 @@
 package io.loop.test.H_day07;
 
+import io.loop.test.Utilities.Driver;
 import io.loop.test.base.TestBase;
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
@@ -30,6 +31,7 @@ public class T2  extends TestBase {
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
         Thread.sleep(6000);
         alert.accept();
+
 
 
 

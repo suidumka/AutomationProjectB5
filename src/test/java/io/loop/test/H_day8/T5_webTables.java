@@ -1,5 +1,6 @@
 package io.loop.test.H_day8;
 
+import io.loop.test.Utilities.DocuportConstants;
 import io.loop.test.Utilities.DocuportUtils;
 import io.loop.test.base.TestBase;
 import org.openqa.selenium.By;
@@ -13,7 +14,7 @@ public class T5_webTables extends TestBase {
 
     @Test
     public void docuportPage() throws InterruptedException{
-        DocuportUtils.login(driver, "advisor");
+        DocuportUtils.login(driver, DocuportConstants.ADVISOR);
 
 
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));

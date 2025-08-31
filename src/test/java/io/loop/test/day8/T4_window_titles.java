@@ -43,7 +43,8 @@ public class T4_window_titles extends TestBase {
         }
 */
         // Option 2
-        BrowsersUtils.switchToWindow(driver, "Amaz");
+       // BrowsersUtils.switchWindowAndValidate(driver, "www.loopcamp.io" , "Loopcamp");
+        BrowsersUtils.switchToWindow(driver, "Loop");
 
     }
 

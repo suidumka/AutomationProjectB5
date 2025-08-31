@@ -50,10 +50,7 @@ public class Driver {
         return driver;
     }
 
-    /**
-     * Closing the driver
-     * @author nsh
-     */
+
     public static void closeDriver() {
         if (driver != null) {
             driver.quit();

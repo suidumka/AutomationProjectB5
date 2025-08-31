@@ -34,7 +34,6 @@ public class T2_windows extends TestBase {
 
         //get original window handle : saving it's ID to be able to go back to it:
         String originalWindow = driver.getWindowHandle();
-
         //get all window handles - loop through the windows and stays at the last window
         Set<String> windowHandles = driver.getWindowHandles();
 
