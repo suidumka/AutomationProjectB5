@@ -23,6 +23,7 @@ public class Driver {
 
     private static WebDriver driver;
 
+
     /*
     Creating a reusable method that will return the same driver instance every time when we call it
      */
