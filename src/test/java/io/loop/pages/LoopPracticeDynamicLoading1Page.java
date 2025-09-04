@@ -8,6 +8,7 @@ import org.openqa.selenium.support.PageFactory;
 public class LoopPracticeDynamicLoading1Page {
 
     public LoopPracticeDynamicLoading1Page(){
+
         PageFactory.initElements(Driver.getDriver(),this);
     }
     @FindBy(xpath =  "//button[.='Start']")

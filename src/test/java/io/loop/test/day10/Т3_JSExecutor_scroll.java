@@ -7,20 +7,20 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.testng.annotations.Test;
 
-public class Т3_JSExecutor {
+public class Т3_JSExecutor_scroll {
     @Test
     public void loopcampScroll(){
         Driver.getDriver().get("https://loopcamp.vercel.app/index.html");
 
         WebElement link = Driver.getDriver().findElement(By.xpath("//a[@href='https://www.loopcamp.io/']"));
 
-        //how to scroll
-        //#1 use the actions class move to element
-        Actions actions = new Actions(Driver.getDriver());
-        //  actions.moveToElement(link).perform();
-        //  actions.scrollToElement(link).perform(); // same thing as moveToElement()
+     /*  // how to scroll
 
-        System.out.println("....................................");
+
+       // #1 use the actions class move to element
+        Actions actions = new Actions(Driver.getDriver());
+          actions.moveToElement(link).perform();
+          actions.scrollToElement(link).perform(); // same thing as moveToElement()*/
 
         //#2 use key press
         //actions.sendKeys(Keys.PAGE_DOWN, Keys.PAGE_DOWN, Keys.PAGE_DOWN).perform();

@@ -31,7 +31,8 @@ public class T1_actions_hoverover {
         Thread.sleep(3000);
 
         actions.moveToElement(feelingLucky).perform();
-        actions.sendKeys("F12");
+        actions.sendKeys("F12"); //f12 will refresh the page
+
 
 
     }
