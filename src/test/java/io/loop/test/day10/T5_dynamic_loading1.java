@@ -4,7 +4,6 @@ import io.loop.pages.LoopPracticeDynamicLoading1Page;
 import io.loop.test.Utilities.BrowsersUtils;
 import io.loop.test.Utilities.ConfigurationReader;
 import io.loop.test.Utilities.Driver;
-import org.openqa.selenium.support.FindBy;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;

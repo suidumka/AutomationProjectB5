@@ -8,6 +8,7 @@ import org.openqa.selenium.support.PageFactory;
 public class LoopPracticeDragDropPage {
 
     public LoopPracticeDragDropPage(){
+
         PageFactory.initElements(Driver.getDriver(),this);
     }
 
